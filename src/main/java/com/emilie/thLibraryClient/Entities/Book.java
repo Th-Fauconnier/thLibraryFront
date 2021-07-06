@@ -1,0 +1,30 @@
+package com.emilie.thLibraryClient.Entities;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Set;
+
+@Data
+@NoArgsConstructor
+public class Book {
+
+    private Long id;
+    private String title;
+    private String isbn;
+    private String summary;
+    private Author author;
+    private Set<Copy> copies;
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", summary='" + summary + '\'' +
+                ", author=" + author +
+                ", copies=" + copies +
+                '}';
+    }
+}
